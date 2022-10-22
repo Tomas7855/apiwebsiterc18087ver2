@@ -1,3 +1,4 @@
+
 img {width:3cm;height:3cm;}
 table {width:80%;margin:auto;}
 th#price {cursor:pointer;}
@@ -11,3 +12,11 @@ input#c3:checked ~ table tbody tr.c3 { display: table-row; }
 input#c3:not(checked) ~ table tbody tr.c3 { display: none; }
 input#c4:checked ~ table tbody tr.c4 { display: table-row; }
 input#c4:not(checked) ~ table tbody tr.c4 { display: none; }
+
+table.form-productos {
+        border: #b2b2b2 1px solid;
+}
+  td, th {
+    border: black 1px solid;
+  }
+

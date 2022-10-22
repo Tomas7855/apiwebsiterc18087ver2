@@ -3,35 +3,70 @@
 
 <head>
 	<title>Ejemplo web api</title>
-	<meta charset="utf-8"  />
-<LINK REL=StyleSheet HREF="estilo.css" TYPE="text/css" MEDIA=screen>
-<script src="codigo.js"></script>
+	<meta charset="utf-8" />
+	<LINK REL=StyleSheet HREF="./estilo.css" TYPE="text/css" MEDIA=screen>
+		<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
 
+		
 </head>
 
-<body >
- <h1>Ejemplo web api</h1>
-     <p>Tomas Eduardo Romero Cañas RC18087 Grupo 7</p>
-	 <p><button onclick="obtenerProductos();this.style.display='none';">Obtener Productos</button></p>
-	 <div id="listado" style="display:none;">
-	 <form name="filtroprods" id="filtroprods">
-	   Seleccione Categorias 
-	   <input type="checkbox" id="c1" value="c1" checked>Electronicos
-	 <input type="checkbox" id="c2" value="c2" checked>Joyería
-   <input type="checkbox" id="c3" value="c3" checked>Ropa Caballero
-   <input type="checkbox" id="c4" value="c4" checked>Ropa Dama
-   <ol><li>Click en la imagen para Acercamiento</li>
-   <li>Click en precio para ordenar Asc o Desc</li></ol>
-     <table id="tabla" border="1">
-	 <thead>
-	 <tr><th>id</th><th>foto</th><th  id="price">price</th>
-	 <th>title</th><th>description</th><th>category</th></tr>
-	 </thead>
-	 <tbody id="tbody"></tbody>
-	 </table>
-	 </form>
-	 </div>
+<body>
+	<h1>Ejemplo Web Api Ver2</h1>
+	<h2>Tomas Eduardo Romero Cañas RC18087 Grupo7</h2>
+
+	<div class="container">
+		<table class="form-productos table table-striped table-dark">
+			<thead>
+				<tr><th>FORMULARIO PARA INGRESO DE PRODUCTOS</th></tr>
+			</thead>
+			<tbody>
+				<tr><th>Nombre producto <br><input type="text" name="" id="produName" class="form-control"></th></tr>
+				<tr><th>Descripcion     <br><input type="text" name="" id="descrip" class="form-control"></th></tr>
+				<tr><th>Categoria       <br><input type="text" name="" id="cat" class="form-control"></th></tr>
+				<tr><th>Ruta imagen     <br><input type="text" name="" id="imgPath" class="form-control"></th></tr>
+				<tr><th>Precio          <br><input type="text" name="" id="pri" class="form-control"></th></tr>
+			</tbody>
+		</table>
+		<button id="btnCrear" class="btn m-1 btn-warning btn-sm">Crear</button>
+	</div>
 	
-     
+	<div class="container">
+		<button class="btn m-1 btn-warning btn-sm" onclick="obtenerProductos();this.style.display='none';">Obtener Productos</button>
+		<div id="listado" style="display:none;">
+		
+			<form name="filtroprods" id="filtroprods">
+				Seleccione Categorias
+				<input type="checkbox" id="c1" value="c1" checked>Electronicos
+				<input type="checkbox" id="c2" value="c2" checked>Joyería
+				<input type="checkbox" id="c3" value="c3" checked>Ropa Caballero
+				<input type="checkbox" id="c4" value="c4" checked>Ropa Dama
+				
+				<ol>
+					<li>Click en la imagen para Acercamiento</li>
+					<li>Click en precio para ordenar Asc o Desc</li>
+				</ol>
+	
+				<table id="tabla" border="1" class="table table-striped table-dark">
+					<thead>
+						<tr>
+							<th>id</th>
+							<th>foto</th>
+							<th id="price">price</th>
+							<th>title</th>
+							<th>description</th>
+							<th>category</th>
+							<th>Eliminar</th>
+						</tr>
+					</thead>
+					<tbody id="tbody"></tbody>
+				</table>
+			</form>
+		</div>
+	
+	</div>
+	
+	
+	<script src="./codigo.js"></script>
 </body>
+
 </html>
